@@ -1,0 +1,76 @@
+<section class="contact-section py-5">
+  <div class="section-glow glow-blue"></div>
+
+  <div class="container py-4">
+    <div class="section-header text-center mb-5">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title mt-2">Contact <span class="text-gradient">Me</span></h2>
+      <p class="section-sub mt-2">Have a freelance project in mind? Let's talk!</p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-5">
+        <div class="contact-info glass p-4 h-100">
+          <h5 class="info-title mb-4">Let's connect</h5>
+
+          <div class="info-item d-flex align-items-center gap-3 mb-4">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">salmaassem511@gmail.com</div>
+            </div>
+          </div>
+          <div class="info-item d-flex align-items-center gap-3 mb-4">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Location</div>
+              <div class="info-value">Egypt</div>
+            </div>
+          </div>
+          <div class="info-item d-flex align-items-center gap-3">
+            <div class="info-icon">💼</div>
+            <div>
+              <div class="info-label">LinkedIn</div>
+              <div class="info-value">linkedin.com/in/salma-assem</div>
+            </div>
+          </div>
+
+          <div class="social-links mt-5 d-flex gap-3">
+            <a href="https://github.com/salmaassem-eng" class="social-btn" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/salma-assem/" class="social-btn" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-6 col-md-7">
+        <div class="contact-form glass p-4">
+          <div class="mb-3">
+            <label class="form-label-custom">Your Name</label>
+            <input type="text" class="form-input" placeholder="Ahmed Mohamed" [(ngModel)]="form.name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label-custom">Email Address</label>
+            <input type="email" class="form-input" placeholder="ahmed@example.com" [(ngModel)]="form.email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label-custom">Subject</label>
+            <input type="text" class="form-input" placeholder="Project collaboration" [(ngModel)]="form.subject">
+          </div>
+          <div class="mb-4">
+            <label class="form-label-custom">Message</label>
+            <textarea class="form-input" rows="5" placeholder="Tell me about your project..." [(ngModel)]="form.message"></textarea>
+          </div>
+          <button class="btn btn-send w-100" (click)="sendMessage()">
+            Send Message <span>📧</span>
+          </button>
+
+          <div class="success-msg mt-3" *ngIf="sent">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

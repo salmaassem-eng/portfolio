@@ -1,0 +1,146 @@
+.projects-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+.section-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+.glow-purple { background: #F4C0D1; top: 0; right: -200px; }
+
+.section-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D4537E;
+  font-weight: 600;
+}
+.section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; color: #2A1119; }
+.text-gradient {
+  background: linear-gradient(135deg, #D4537E, #993556);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-sub { color: rgba(42, 17, 25, 0.5); font-size: 0.95rem; }
+
+/* ── Card ── */
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(42, 17, 25, 0.1) !important;
+}
+
+/* ── Thumbnail ── */
+.project-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #FBEAF0;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Fallback placeholder */
+.project-img-placeholder {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FBEAF0, #F4C0D1);
+  text-align: center;
+  padding: 1rem;
+}
+.placeholder-hint {
+  font-size: 0.7rem;
+  color: #993556;
+  line-height: 1.6;
+}
+.placeholder-hint code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  background: rgba(212, 83, 126, 0.12);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* Hover overlay with CTA buttons */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 17, 25, 0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+.overlay-btn {
+  background: #D4537E;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.overlay-btn:hover {
+  background: #993556;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.overlay-btn-ghost {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.7);
+  color: #fff;
+}
+.overlay-btn-ghost:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ── Body ── */
+.project-body {}
+.project-title { font-size: 1.02rem; font-weight: 600; color: #2A1119; }
+.project-desc  { font-size: 0.86rem; color: rgba(42, 17, 25, 0.55); line-height: 1.65; }
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  background: rgba(212, 83, 126, 0.07);
+  border: 1px solid rgba(212, 83, 126, 0.2);
+  color: #993556;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.73rem;
+  font-weight: 500;
+}

@@ -1,0 +1,18 @@
+.footer {
+  background: rgba(251, 234, 240, 0.7);
+  border-top: 1px solid rgba(212, 83, 126, 0.12);
+  backdrop-filter: blur(12px);
+}
+.footer-brand { font-family: 'Fira Code', monospace; font-size: 1rem; font-weight: 700; }
+.brand-dim    { color: rgba(153, 53, 86, 0.3); }
+.brand-accent { color: #D4537E; }
+
+.footer-link {
+  font-size: 0.85rem;
+  color: rgba(42, 17, 25, 0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover { color: #D4537E; }
+
+.footer-copy { font-size: 0.8rem; color: rgba(42, 17, 25, 0.35); }

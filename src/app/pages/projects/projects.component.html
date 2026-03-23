@@ -1,0 +1,46 @@
+<section class="projects-section py-5">
+  <div class="section-glow glow-purple"></div>
+
+  <div class="container py-4">
+    <div class="section-header text-center mb-5">
+      <span class="section-label">My Work</span>
+      <h2 class="section-title mt-2">Featured <span class="text-gradient">Projects</span></h2>
+      <p class="section-sub mt-2">A selection of things I've built</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let project of projects">
+        <div class="project-card glass h-100">
+
+          <!-- Screenshot image -->
+          <div class="project-thumbnail">
+            <img
+              [src]="project.image"
+              [alt]="project.title"
+              class="project-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Fallback placeholder if image is missing -->
+            <div class="project-img-placeholder">
+              <span class="placeholder-hint">Add screenshot to<br><code>{{ project.image }}</code></span>
+            </div>
+            <!-- Overlay with links on hover -->
+            <div class="project-overlay">
+              <a [href]="project.demo" class="overlay-btn" target="_blank">Live Demo ↗</a>
+              <a [href]="project.github" class="overlay-btn overlay-btn-ghost" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="project-body p-4">
+            <h5 class="project-title">{{ project.title }}</h5>
+            <p class="project-desc mt-2">{{ project.description }}</p>
+            <div class="project-tags mt-3">
+              <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
