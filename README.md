@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Salma Assem — Frontend Developer Portfolio
 A personal portfolio website built with Angular 16 as a hands-on learning project — applying real Angular concepts while creating a production-ready app.
+
 🔗 Live Demo: https://salmaassem-eng.github.io/portfolio/
 
 ✨ Features
