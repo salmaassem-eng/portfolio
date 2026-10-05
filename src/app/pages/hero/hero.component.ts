@@ -10,7 +10,7 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     new Typed('.typing', {
       strings: [
-        'Front-End Developer',
+        'Front-End Developer | Full-Stack JavaScript Developer',
       ],
       typeSpeed: 50,
       backSpeed: 30,

@@ -8,6 +8,24 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
+    title: 'Yummy Meals',
+        description:
+          'Yummy Meals is a modern food-sharing web application built with Next.js. It allows users to discover recipes, explore meal ideas, and share their own favorite dishes with a community of food lovers. The app combines a polished user experience with practical functionality such as dynamic meal pages, recipe submission, and SQLite-backed data storage.' ,
+        tags: ['Next.js', 'JavaScript', 'TypeScript','Tailwind CSS','CSS3', 'sqlite','Responsive Design'],
+        image: 'assets/yummy.png',
+        demo: 'https://yummy-meals-chi.vercel.app/',
+        github: 'https://github.com/salmaassem-eng/Yummy_Meals',
+      },
+      {
+  title: 'Med Wasla',
+      description:
+        'MedWasla is a full-stack healthcare platform that connects patients with verified medical specialists across Egypt. Patients can discover doctors and nurses, book appointments, join live clinic queues, chat with an AI assistant, and leave reviews. Specialists manage profiles, availability, and patient flow. Administrators verify and approve specialist registrations.' ,
+      tags: ['React', 'JavaScript', 'TypeScript','Tailwind CSS','CSS3', 'Rest API','Node.js', 'MongoDB','Responsive Design'],
+      image: 'assets/medwasla.png',
+      demo: 'https://med-wasla.vercel.app/',
+      github: 'https://github.com/salmaassem-eng/med-wasla',
+    },
+    {
   title: 'Shatably with AI',
       description:
         'Shatably is a service-based platform that connects users with professional workers for home finishing services, including painting, carpentry, electrical work, and plumbing. The platform allows users to browse services, view details, check worker ratings, and submit service requests through a clean and user-friendly interface. Built to streamline the process of finding reliable workers quickly and efficiently.' ,
